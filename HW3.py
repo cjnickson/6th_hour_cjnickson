@@ -7,7 +7,7 @@ classlist = ["cj", "evan","elijah",'seeley',"aj"]
 
 classlist.append(input())
 
-print(f"{classlist[3]} is HERE!")
+print(f"{classlist[0]} is HERE!")
 
 numlist =["1","35","88","23"]
 
