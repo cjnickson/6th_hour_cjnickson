@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="numbers = [77,55,45,6,9,2] HW3" />
+    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="HW4">
+      <change afterPath="$PROJECT_DIR$/scenario 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,8 +27,8 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -48,16 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.HW2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.helloworld.executor&quot;: &quot;Run&quot;,
-    &quot;Python.playground.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.HW2.executor": "Run",
+    "Python.HW3.executor": "Run",
+    "Python.HW4.executor": "Run",
+    "Python.helloworld.executor": "Run",
+    "Python.playground.executor": "Run",
+    "Python.scenario 1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="#name CJ Nickson #class 6th hour #assigment HW1 print(&quot;helloworld&quot;)" />
@@ -167,15 +172,52 @@
       <option name="project" value="LOCAL" />
       <updated>1725648674788</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="numbers = [77,55,45,6,9,2] HW3">
+      <option name="closed" value="true" />
+      <created>1726167854874</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726167854874</updated>
+    </task>
+    <task id="LOCAL-00013" summary="HW4">
+      <option name="closed" value="true" />
+      <created>1726167870204</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726167870204</updated>
+    </task>
+    <task id="LOCAL-00014" summary="HW4">
+      <option name="closed" value="true" />
+      <created>1726167911274</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726167911274</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="inital commit" />
     <MESSAGE value="added HW1" />
     <MESSAGE value="added HW2" />
     <MESSAGE value="added HW3" />
+    <MESSAGE value=" HW4" />
     <MESSAGE value="numbers = [77,55,45,6,9,2] HW3" />
-    <option name="LAST_COMMIT_MESSAGE" value="numbers = [77,55,45,6,9,2] HW3" />
+    <MESSAGE value="HW4" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW4" />
   </component>
 </project>
