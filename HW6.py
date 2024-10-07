@@ -28,7 +28,7 @@ if num % 2==0:
         print(num / 3)
     else:
         print("num is not % by 3")
-    print(num / 3)
+        print(num / 3)
 else:
     if num % 3==0:
         print("num is not % by 2")
