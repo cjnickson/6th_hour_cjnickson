@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="HW9">
-      <change afterPath="$PROJECT_DIR$/HW10.py" afterDir="false" />
+    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="HW10">
+      <change afterPath="$PROJECT_DIR$/HW11.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW10.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW10.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.HW2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW6.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW7.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW8.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HW9.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Scenario3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.helloworld.executor&quot;: &quot;Run&quot;,
-    &quot;Python.playground.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scenario 1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scenario 2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.HW10.executor": "Run",
+    "Python.HW11.executor": "Run",
+    "Python.HW2.executor": "Run",
+    "Python.HW3.executor": "Run",
+    "Python.HW4.executor": "Run",
+    "Python.HW5.executor": "Run",
+    "Python.HW6.executor": "Run",
+    "Python.HW7.executor": "Run",
+    "Python.HW8.executor": "Run",
+    "Python.HW9.executor": "Run",
+    "Python.Scenario3.executor": "Run",
+    "Python.helloworld.executor": "Run",
+    "Python.playground.executor": "Run",
+    "Python.scenario 1.executor": "Run",
+    "Python.scenario 2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="#name CJ Nickson #class 6th hour #assigment HW1 print(&quot;helloworld&quot;)" />
@@ -291,7 +294,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729795617235</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="HW10">
+      <option name="closed" value="true" />
+      <created>1730314246734</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1730314246734</updated>
+    </task>
+    <task id="LOCAL-00027" summary="HW10">
+      <option name="closed" value="true" />
+      <created>1730314257236</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1730314257236</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -322,7 +341,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="HW8" />
     <MESSAGE value="HW9" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW9" />
+    <MESSAGE value="HW10" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
