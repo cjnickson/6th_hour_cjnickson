@@ -14,18 +14,25 @@ print("helloworld!")
 #a single model from 1 to 5, and then give the average score of all of the ratings.
 
 #Step 1. Establish Variables
-total_ratings = 0
-number_of_players = int(input("enter the number of players:"))
+
 #Step 2. Make a loop
-for i in range(number_of_players):
+
 #Step 2a. Ask for a rating number
-ratingsum = int(input(f"enter rating for player{i+1}:"))
+
 #Step 2b. Check if rating number is between 1 and 5
-while ratingsum< 1 or ratingsum>5
-    print("invalid rating. please enter a rating between 1 and 5.")
-    ratingsum = int(input(f"enter rating for player {i+1}:"))
+
 #Step 2c. If rating number is valid, add to total
-total_ratings += ratingrum
+
 #Step 3. Find and print the average
-average_rating = total_ratings/ number_of_players
-print(f"the average rating is:{average_rating}")
+playercount = int(input("insert number of players"))
+ratingsum = 0
+for i in range(1,playercount +1):
+
+    ratingnumb = int(input("inser rating"))
+    if ratingnumb > 5 or ratingnumb< 1:
+        print("invalid number")
+    else:
+        ratingsum += ratingnumb
+
+average = ratingsum / playercount
+print(average)
