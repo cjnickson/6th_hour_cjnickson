@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="scenario5 done">
-      <change afterPath="$PROJECT_DIR$/HW16.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hw17.py" afterDir="false" />
+    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="scenario4">
+      <change afterPath="$PROJECT_DIR$/scenario 5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,6 @@
     "Python.HW12.executor": "Run",
     "Python.HW13.executor": "Run",
     "Python.HW14.executor": "Run",
-    "Python.HW16.executor": "Run",
     "Python.HW2.executor": "Run",
     "Python.HW3.executor": "Run",
     "Python.HW4.executor": "Run",
@@ -70,8 +68,6 @@
     "Python.HW9.executor": "Run",
     "Python.Scenario3.executor": "Run",
     "Python.helloworld.executor": "Run",
-    "Python.hw15.executor": "Run",
-    "Python.hw17.executor": "Run",
     "Python.playground.executor": "Run",
     "Python.scenario 1.executor": "Run",
     "Python.scenario 2.executor": "Run",
@@ -366,15 +362,7 @@
       <option name="project" value="LOCAL" />
       <updated>1732217770740</updated>
     </task>
-    <task id="LOCAL-00034" summary="scenario5 done">
-      <option name="closed" value="true" />
-      <created>1734033075354</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1734033075354</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,8 +397,7 @@
     <MESSAGE value="HW14" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="scenario4" />
-    <MESSAGE value="scenario5 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="scenario5 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="scenario4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
