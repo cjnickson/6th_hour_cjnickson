@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="scenario4">
-      <change afterPath="$PROJECT_DIR$/scenario 5.py" afterDir="false" />
+    <list default="true" id="6a0f5cfa-17f2-4dfe-aaa3-fe76b050952b" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +67,7 @@
     "Python.HW9.executor": "Run",
     "Python.Scenario3.executor": "Run",
     "Python.helloworld.executor": "Run",
+    "Python.hw18.executor": "Run",
     "Python.playground.executor": "Run",
     "Python.scenario 1.executor": "Run",
     "Python.scenario 2.executor": "Run",
@@ -362,7 +362,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732217770740</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1737662284045</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1737662284045</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1738180265704</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1738180265704</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,7 +413,9 @@
     <MESSAGE value="HW14" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="scenario4" />
-    <option name="LAST_COMMIT_MESSAGE" value="scenario4" />
+    <MESSAGE value="scenario5 done" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
