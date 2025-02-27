@@ -19,3 +19,14 @@ print(numlist)
 
 sum = numlist[0] + numlist[1] +numlist[2]
 print(sum)
+
+
+
+sports_data = {
+    'sport1':
+        {'basketball',
+         'players'5,'uses_ball':True},
+
+    'sport2': {'baseball','players':9,'uses_ball': True},
+
+    'sport3': {'football','players':5,'uses_ball': True},

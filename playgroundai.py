@@ -1,141 +1,160 @@
-import random
-
 import pygame
 import random
+import sys
 
 # Initialize Pygame
 pygame.init()
 
-# Set up screen
+# Screen dimensions
 screen_width = 800
 screen_height = 600
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("2D Basketball Game")
+pygame.display.set_caption("Platformer Adventure")
 
-# Define colors
+# Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-RED = (255, 0, 0)
 BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
 
-# Set up player attributes
+# Game settings
+clock = pygame.time.Clock()
+player_speed = 5
+gravity = 0.5
+jump_strength = -10
+score = 0
+
+# Fonts
+font = pygame.font.SysFont("Arial", 30)
+
+# Define game objects
 player_width = 50
 player_height = 60
-player_x = screen_width // 2 - player_width // 2
-player_y = screen_height - player_height - 10
-player_speed = 5
+player_x = 100
+player_y = screen_height - player_height - 60
+player_velocity_y = 0
+on_ground = False
 
-# Ball attributes
-ball_radius = 10
-ball_x = player_x + player_width // 2
-ball_y = player_y - ball_radius
-ball_speed = 7
-ball_velocity_x = 0
-ball_velocity_y = 0
-shooting = False
+# Platform class
+class Platform:
+    def __init__(self, x, y, width, height):
+        self.rect = pygame.Rect(x, y, width, height)
 
-# Hoop attributes
-hoop_x = random.randint(650, 750)
-hoop_y = 100
-hoop_width = 100
-hoop_height = 10
+    def draw(self):
+        pygame.draw.rect(screen, GREEN, self.rect)
 
-# Score
-score = 100000000000000
+# Enemy class
+class Enemy:
+    def __init__(self, x, y, width, height, speed):
+        self.rect = pygame.Rect(x, y, width, height)
+        self.speed = speed
+        self.direction = 1  # 1: moving right, -1: moving left
 
-# Set up font
-font = pygame.font.SysFont(None, 36)
+    def update(self):
+        self.rect.x += self.speed * self.direction
+        if self.rect.x < 0 or self.rect.x > screen_width - self.rect.width:
+            self.direction *= -1
 
-# Game loop flag
-running = True
+    def draw(self):
+        pygame.draw.rect(screen, RED, self.rect)
 
+# Collectible class
+class Collectible:
+    def __init__(self, x, y, width, height):
+        self.rect = pygame.Rect(x, y, width, height)
 
-def draw_player(x, y):
-    pygame.draw.rect(screen, BLUE, (x, y, player_width, player_height))
+    def draw(self):
+        pygame.draw.circle(screen, BLUE, self.rect.center, self.rect.width // 2)
 
+# Create game objects
+player = pygame.Rect(player_x, player_y, player_width, player_height)
+platforms = [Platform(0, screen_height - 40, screen_width, 40), Platform(200, 400, 200, 20), Platform(500, 300, 200, 20)]
+enemies = [Enemy(400, 500, 50, 50, 3), Enemy(600, 200, 50, 50, 2)]
+collectibles = [Collectible(random.randint(100, 700), random.randint(100, 500), 20, 20) for _ in range(5)]
 
-def draw_ball(x, y):
-    pygame.draw.circle(screen, RED, (x, y), ball_radius)
+# Game loop
+while True:
+    screen.fill(WHITE)
 
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
 
-def draw_hoop(x, y):
-    pygame.draw.rect(screen, BLACK, (x, y, hoop_width, hoop_height))
+    # Key presses
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        player.x -= player_speed
+    if keys[pygame.K_RIGHT]:
+        player.x += player_speed
+    if keys[pygame.K_SPACE] and on_ground:
+        player_velocity_y = jump_strength
+        on_ground = False
 
+    # Apply gravity
+    player_velocity_y += gravity
+    player.y += player_velocity_y
 
-def draw_score(score):
+    # Collision with platforms
+    on_ground = False
+    for plat in platforms:
+        if player.colliderect(plat.rect) and player_velocity_y >= 0:
+            player_velocity_y = 0
+            player.y = plat.rect.top - player.height
+            on_ground = True
+
+    # Update enemies
+    for enemy in enemies:
+        enemy.update()
+
+    # Collectibles logic
+    for collectible in collectibles[:]:
+        if player.colliderect(collectible.rect):
+            collectibles.remove(collectible)
+            score += 1
+
+    # Draw platforms
+    for plat in platforms:
+        plat.draw()
+
+    # Draw enemies
+    for enemy in enemies:
+        enemy.draw()
+
+    # Draw collectibles
+    for collectible in collectibles:
+        collectible.draw()
+
+    # Draw player
+    pygame.draw.rect(screen, BLACK, player)
+
+    # Draw score
     score_text = font.render(f"Score: {score}", True, BLACK)
     screen.blit(score_text, (10, 10))
 
+    # Check for game over
+    if player.y > screen_height:
+        game_over_text = font.render("Game Over! Press R to restart.", True, RED)
+        screen.blit(game_over_text, (screen_width // 3, screen_height // 2))
+        pygame.display.update()
 
-def reset_ball():
-    global ball_x, ball_y, ball_velocity_x, ball_velocity_y
-    ball_x = player_x + player_width // 2
-    ball_y = player_y - ball_radius
-    ball_velocity_x = 0
-    ball_velocity_y = 0
-    return ball_x, ball_y
+        # Wait for restart input
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                if event.type == pygame.KEYDOWN and event.key == pygame.K_r:
+                    # Reset the game
+                    player.x = 100
+                    player.y = screen_height - player_height - 60
+                    player_velocity_y = 10
+                    collectibles = [Collectible(random.randint(100, 700), random.randint(100, 500), 20, 20) for _ in range(5)]
+                    score = 0
+                    break
 
-
-def check_collision():
-    global score
-    if hoop_x < ball_x < hoop_x + hoop_width and hoop_y < ball_y < hoop_y + hoop_height:
-        score += 2
-        return True
-    return False
-
-
-# Main game loop
-while running:
-    screen.fill(WHITE)
-
-    # Event handling
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    # Get keys pressed
-    keys = pygame.key.get_pressed()
-
-    # Player movement
-    if keys[pygame.K_LEFT] and player_x > 0:
-        player_x -= player_speed
-    if keys[pygame.K_RIGHT] and player_x < screen_width - player_width:
-        player_x += player_speed
-    if keys[pygame.K_UP] and player_y > 0:
-        player_y -= player_speed
-    if keys[pygame.K_DOWN] and player_y < screen_height - player_height:
-        player_y += player_speed
-
-    # Shooting the ball
-    if keys[pygame.K_SPACE] and not shooting:
-        ball_velocity_y = -ball_speed
-        shooting = True
-
-    # Update ball position
-    if shooting:
-        ball_x += ball_velocity_x
-        ball_y += ball_velocity_y
-        ball_velocity_y += 1  # Gravity effect
-
-        # Reset ball after shooting
-        if ball_y > screen_height:
-            ball_x, ball_y = reset_ball()
-            shooting = False
-
-        # Check for score (ball going through hoop)
-        if check_collision():
-            ball_x, ball_y = reset_ball()
-            shooting = False
-
-    # Draw everything
-    draw_player(player_x, player_y)
-    draw_ball(ball_x, ball_y)
-    draw_hoop(hoop_x, hoop_y)
-    draw_score(score)
-
+    # Update screen
     pygame.display.update()
-
-    # Set the FPS (frames per second)
-    pygame.time.Clock().tick(60)
-
-pygame.quit()
+    clock.tick(60)
