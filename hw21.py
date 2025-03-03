@@ -29,9 +29,9 @@ sports = {
 #players of all three sports, and prints the sum
 
 def sum_players(sport1, sport2, sport3):
-    total_players = sport1["players"] + sport2["players"] + sport3["players"]
+    total_players = sport1 + sport2 + sport3
     print("Total number of players in all three sports:", total_players)
 
 #3. Call the function with arguments here
 
-sum_players(sports["sport1"], sports["sport2"], sports["sport3"])
+sum_players(sports["sport1"]["players"], sports["sport2"]["players"], sports["sport3"]["players"])
